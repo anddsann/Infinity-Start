@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Chau Philomene One", serif;
+      font-style: normal;
+    }
+    
+
+
+  h1{
+    padding-bottom: 20px 0;
+  }
+  
+  /* Barra de Navegación */
+  header {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .titulo {
+    font-size: 28px;
+    font-weight: normal;
+    color: #000000;
+  }
+  
+  /* Estilos del menú */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    transition: filter 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu a:hover .icon,
+  .menu a:hover {
+    filter: invert(0);
+    color: #fff;
+  }
+  
+  .menu a:hover {
+    background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+    border-radius: 4px;
+    padding: 3px;
+  }
+  
+  /* Menú desplegable para dispositivos pequeños */
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el menú desplegable */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+      position: absolute;
+      top: 60px;
+      left: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu li {
+      padding: 10px;
+      width: 100%;
+      color: white;
+    }
+  
+    .menu li a {
+      color: black;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .menu li a .icon {
+      filter: invert(100%);
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  }
+  
+  /* Cambiar el color de las imágenes a blanco cuando el menú es desplegado */
+  .menu.show a .icon {
+    filter: invert(0) !important;
+  }
+  
+  /* Estilo para el texto blanco del menú desplegable */
+  .menu.show li a {
+    color: white;
+  }
+
+ 
+
+
+
+
+ /*SLIDER BANNER*/ 
+
+
+  /* Ajustes generales del slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+  
+  .slider {
+    display: flex;
+    position: relative;
+  }
+  
+  .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+   
+  /* Controles para navegar manualmente */
+  .controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+  }
+  
+  .prev, .next {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+
+
+/* Estilos para los botones por defecto (en pantallas grandes) */
+.buttons_plaza {
+  position: absolute;
+  bottom: 110px;
+  left: 51%;
+  transform: translateX(-220%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.buttons_refaccion {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-220%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.buttons_garantia {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-390%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.buttons_accesorio {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-220%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.buttons_conoce {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-390%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.buttons_cuida {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-390%);
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.button {
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* Cambio al hacer hover */
+  color: black;
+}
+
+/* Media query para pantallas pequeñas (cambio de posición de los botones) */
+@media screen and (max-width: 767px) {
+  .buttons_plaza {
+    bottom: 5%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 5%;
+    transform: translateX(0); /* Elimina el centrado */
+  }
+  
+  .buttons_refaccion {
+    bottom: 5%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 5%;
+    transform: translateX(0); /* Elimina el centrado */
+    flex-direction: column; /* Coloca los botones en columna */
+    gap: .5px;
+  }
+
+  .buttons_garantia {
+    bottom: 2%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 35%;
+    transform: translateX(0); /* Elimina el centrado */ 
+  }
+  
+  .buttons_accesorio {
+    bottom: 40%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 5%;
+    transform: translateX(150%); /* Elimina el centrado */
+    flex-direction: column; /* Coloca los botones en columna */
+    gap: .5px;
+  }
+
+  .buttons_conoce {
+    bottom: 2%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 35%;
+    transform: translateX(0); /* Elimina el centrado */ 
+  }
+
+  .buttons_cuida {
+    bottom: 2%; /* Mueve los botones un poco más abajo en pantallas pequeñas */
+    left: 35%;
+    transform: translateX(0); /* Elimina el centrado */ 
+  }
+
+  .button {
+    margin-bottom: 10px; /* Espaciado entre los botones */
+    font-size: 12px;
+  }
+}
+
+/* Opcional: Media query para pantallas extra grandes */
+@media screen and (min-width: 1200px) {
+  .slide {
+    height: 500px; /* Mayor altura para pantallas más grandes */
+  }
+}
+
+
+
+
+ /*MERCADO*/ 
+
+.mercado{
+  background-color: #e8e8e8;
+  display: list-item;
+  margin: 2em 0;
+  padding: 1em;
+  text-align: center;
+  font-size: 1em;
+}
+
+.mercado h1{
+  font-size: 2em;
+  padding: .5em;
+
+}
+
+
+ /*PRODUCTOS*/ 
+
+/* Contenedor principal de la galería */
+.product-gallery {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+.gallery-wrapper {
+  display: flex;
+  gap: 15px; /* Espaciado entre las imágenes */
+  transition: transform 0.3s ease; /* Transición suave para el desplazamiento */
+}
+
+.gallery-item {
+  flex-shrink: 0; /* No permitir que las imágenes se encojan */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para los botones de desplazamiento */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-button:hover {
+  opacity: 1; /* Los botones se vuelven más visibles al pasar el cursor */
+}
+
+.scroll-button.left {
+  left: 10px;
+  
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 768px) {
+  .gallery-wrapper {
+    gap: 20px;
+  }
+
+  .gallery-item {
+    width: 20%; /* Ajusta el tamaño de las imágenes en pantallas grandes */
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  .gallery-wrapper {
+    gap: 10px;
+  }
+
+  .gallery-item {
+    width: 45%; /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+  }
+}
+
+
+
+
+
+
+ /*TUTORIALES*/ 
+
+
+.tutoriales{
+  background-color: #e8e8e8;
+  margin: 2em 0;
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Contenedor principal de la galería */
+.video-gallery {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.gallery-container-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.gallery-wrapper-video {
+  display: flex;
+  gap: 15px; /* Espaciado entre los videos */
+  transition: transform 0.3s ease; /* Transición suave para el desplazamiento */
+}
+
+.gallery-item-video {
+  flex-shrink: 0; /* No permitir que los videos se encojan */
+  width: 30%; /* Ajusta el tamaño de los videos */
+  height: 100%; /* Ajusta la altura de los videos */
+}
+
+.gallery-item-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Estilos para los botones de desplazamiento */
+.scroll-button-video {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-button-video:hover {
+  opacity: 1;
+}
+
+.scroll-button-video.left {
+  left: 10px;
+}
+
+.scroll-button-video.right {
+  right: 10px;
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 768px) {
+  .gallery-wrapper-video {
+    gap: 20px;
+  }
+
+  .gallery-item-video {
+    width: 20%; /* Ancho fijo para videos en pantallas grandes */
+    height: 20%; /* Altura fija para los videos */
+  }
+
+  .gallery-container-video {
+    overflow-x: hidden;
+  }
+
+  .gallery-wrapper-video {
+    display: flex;
+  }
+}
+
+
+
+
+.visitanos{
+  background-color: #e8e8e8;
+  margin: 2em 0;
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+
+/*MAPA*/
+
+/* Estilos para el contenedor del mapa */
+.map-section {
+  width: 100%;
+  height: 500px; /* Ajusta la altura del mapa según sea necesario */
+  margin-top: 20px;
+  
+  
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .map-section {
+    padding: 0 6em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map-section {
+    padding: 0;
+  }
+}
+
+
+
+/*LOCAL*/
+
+.local-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: first baseline;
+  text-align: center;
+  padding: 6em;
+  align-content: center;
+  justify-content: space-around;
+  font-size: 1em;
+  gap:1em;
+}
+
+.local-container div{
+  margin: 1em;
+}
+.local-container h1{
+  font-size: 1.6em;
+  padding-bottom: .8em;
+}
+
+
+@media screen and (max-width: 768px) {
+  .local-container {
+    align-items: center;
+    font-size: .8em;
+  }
+  .local-container h1{
+    font-size: 1.2;
+  }
+}
+
+
+
+
+/*WHATSAPP*/
+.chat{
+  width: 160px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: fixed;
+  z-index: 1000;
+  right: 5%;
+  bottom: 5%;
+  
+}
+
+.chat img{
+  width: 60px;
+  height: 60px;
+}
+
+/*FOOTER*/
+
+footer{
+  background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 1em;
+  padding: 2em;
+}
+
+footer h1{
+  font-size: 1.5em;
+  padding-bottom: .5em;
+}
+
+
+.contacto{
+  display: list-item;
+  list-style: none;
+  padding: 2em;
+  
+}
+
+
+.cotizaciones{
+   align-content: left;
+   padding: 2em;
+
+}
+
+.ubicacion{
+  align-content: left;
+  padding: 2em;
+
+}
+
+
+.media {
+  width: 1em;
+  height: 1em;
+  
+}
+
+.social-media a{
+  font-style: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.social-media li{
+  list-style: none;
+}
+
+.bymoon{
+  padding: 2em;
+}
+
+.bymoon img{
+  height: 20px;
+
+}

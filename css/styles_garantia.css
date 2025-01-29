@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Chau Philomene One", serif;
+    font-style: normal;
+  }
+  
+  h1{
+    padding-bottom: 20px 0;
+  }
+  
+  /* Barra de Navegación */
+  header {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .titulo {
+    font-size: 28px;
+    font-weight: normal;
+    color: #000000;
+  }
+  
+  /* Estilos del menú */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    transition: filter 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu a:hover .icon,
+  .menu a:hover {
+    filter: invert(0);
+    color: #fff;
+  }
+  
+  .menu a:hover {
+    background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+    border-radius: 4px;
+    padding: 3px;
+  }
+  
+  /* Menú desplegable para dispositivos pequeños */
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el menú desplegable */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+      position: absolute;
+      top: 60px;
+      left: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu li {
+      padding: 10px;
+      width: 100%;
+      color: white;
+    }
+  
+    .menu li a {
+      color: black;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .menu li a .icon {
+      filter: invert(100%);
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  }
+  
+  /* Cambiar el color de las imágenes a blanco cuando el menú es desplegado */
+  .menu.show a .icon {
+    filter: invert(0) !important;
+  }
+  
+  /* Estilo para el texto blanco del menú desplegable */
+  .menu.show li a {
+    color: white;
+  }
+
+
+  
+
+
+/*Garantias*/
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2em 0 ;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-item {
+  position: relative;
+  width: 23%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+  color: #fff;
+  font-size: 2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay {
+  opacity: 70%;
+}
+
+
+.details {
+  display: flex;  
+  gap: 30px;
+  align-items: center;
+  margin: .5em 2em;
+}
+
+.details-image {
+  width: 30%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.details-text {
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.5;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details-text strong {
+  font-size: 50px; /* Tamaño más grande para el título */
+  margin-bottom: 10px;
+  display: block; /* Asegura un salto de línea después del título */
+}
+
+.details-text p {
+  margin-top: 10px; /* Espacio antes de la descripción */
+  line-height: 1.5;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#back-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+}
+
+@media (max-width: 768px) {
+  .image-item {
+    width: 45%;
+  }
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details-image {
+    width: 100%;
+  }
+
+  .details-text {
+    width: 100%;
+    font-size: 1.5em;
+  }
+}
+
+
+
+
+/*WHATSAPP*/
+.chat{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    z-index: 1000;
+    right: 5%;
+    bottom: 5%;
+    
+  }
+  
+  .chat img{
+    width: 60px;
+    height: 60px;
+  }
+  
+  
+  /*FOOTER*/
+  
+  footer{
+    background: linear-gradient(to bottom, #004d00, rgb(0, 0, 0));
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    font-size: 1em;
+    padding: 2em;
+  }
+
+  footer h1{
+    font-size: 1.5em;
+    padding-bottom: .5em;
+  }
+
+  
+  .contacto{
+    display: list-item;
+    list-style: none;
+    padding: 2em;
+    
+  }
+  
+ 
+  .cotizaciones{
+     align-content: left;
+     padding: 2em;
+  
+  }
+
+  .ubicacion{
+    align-content: left;
+    padding: 2em;
+  
+  }
+  
+  
+  .media {
+    width: 1em;
+    height: 1em;
+    
+  }
+  
+  .social-media a{
+    font-style: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .social-media li{
+    list-style: none;
+  }
+
+  .bymoon{
+    padding: 2em;
+  }
+  
+  .bymoon img{
+    height: 20px;
+
+  }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#Inicio"><img src="img/logo.webp" alt="Logo"/></a>
+      </div>
+      <div class="titulo">Infinity start</div>
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
+      <ul class="menu" id="menu">
+        <li><a href="#Inicio"><img src="img/icono_inicio.webp" alt="Inicio" class="icon"> Inicio</a></li>
+        <li><a href="#Tutoriales"><img src="img/icono_tutorial.webp" alt="Tutorialess" class="icon"> Tutoriales</a></li>
+        <li><a href="comprar.html"><img src="img/icono_comprar.webp" alt="Cómo comprar" class="icon"> Cómo comprar</a></li>
+        <li><a href="#Visitanos"><img src="img/icono_visita.webp" alt="Vísitanos" class="icon"> Vísitanos</a></li>
+        <li><a href="garantia.html"><img src="img/icono_garantia.webp" alt="Garantía" class="icon"> Garantía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Galería de Sliders -->
+  <section class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <picture>
+          <source srcset="img/plaza-central-87-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/plaza-central-87-banner-small.webp" alt="Banner 1">
+        </picture>
+        <div class="buttons_plaza">
+          <a href="#Visitanos" class="button cotizar">Ver mapa</a>
+          <a href="#Horario" class="button conocer">Horario</a>
+        </div>
+      </div>
+      <div class="slide">
+        <picture>
+          <source srcset="img/refacciones-originales-smartphone-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/refacciones-originales-smartphone-banner-small.webp" alt="Banner 2">
+        </picture>
+        <div class="buttons_refaccion">
+          <a href="https://api.whatsapp.com/message/7M7B2VEXW2FXN1?autoload=1&app_absent=0" class="button cotizar">Cotizar</a>
+          <a href="#Productos" class="button conocer">Conocer</a>
+        </div>
+      </div>
+      <div class="slide">
+        <picture>
+          <source srcset="img/garantia-infinity-start-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/garantia-infinity-start-banner-small.webp" alt="Banner 3">
+        </picture>
+        <div class="buttons_garantia">
+          <a href="html/garantia.html" class="button cotizar">Saber más</a>
+        </div>
+      </div>
+      <div class="slide">
+        <picture>
+          <source srcset="img/accesorios-originales-smartphone-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/accesorios-originales-smartphone-banner-small.webp" alt="Banner 4">
+        </picture>
+        <div class="buttons_accesorio">
+          <a href="https://api.whatsapp.com/message/7M7B2VEXW2FXN1?autoload=1&app_absent=0" class="button cotizar">Cotizar</a>
+          <a href="#Productos" class="button conocer">Conocer</a>
+        </div>
+      </div>
+      <div class="slide">
+        <picture>
+          <source srcset="img/conoce-tu-smartphone-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/conoce-tu-smartphone-banner-small.webp" alt="Banner 5">
+        </picture>
+        <div class="buttons_conoce">
+          <a href="#Tutoriales" class="button cotizar">Saber más</a>
+        </div>
+      </div>
+      <div class="slide">
+        <picture>
+          <source srcset="img/cuida-tu-smartphone-banner-large.webp" media="(min-width: 768px)">
+          <img src="img/cuida-tu-smartphone-banner-small.webp" alt="Banner 6">
+        </picture>
+        <div class="buttons_cuida">
+          <a href="#Tutoriales" class="button cotizar">Saber más</a>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+      <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+  </section>
+
+  <section class="mercado">
+    <h1>17 años en el mercado</h1>
+    <h2>Refacciones originales y tipo original de varias marcas, para cuidar tu equipo. La mejor calidad siempre.</h2>
+  </section>
+
+  <section class="product-gallery" id="Productos">
+    <h1>Nuestros productos</h1>
+    <button class="scroll-button left" onclick="scrollGallery('left')">&#10094;</button>
+    <div class="gallery-container">
+      <div class="gallery-wrapper">
+        <div class="gallery-item"><img src="img/producto_centro_de_carga.webp" alt="Producto 1"></div>
+        <div class="gallery-item"><img src="img/producto_altavoz.webp" alt="Producto 2"></div>
+        <div class="gallery-item"><img src="img/producto_auricular.webp" alt="Producto 3"></div>
+        <div class="gallery-item"><img src="img/producto_tableta_de_carga.webp" alt="Producto 4"></div>
+        <div class="gallery-item"><img src="img/producto_lector_sim.webp" alt="Producto 5"></div>
+        <div class="gallery-item"><img src="img/producto_boton_on_off.webp" alt="Producto 6"></div>
+        <div class="gallery-item"><img src="img/producto_otg.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_cable_de_datos.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_fps.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_flexor_de_carga.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_desarmador.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_tornillo_iphone.webp" alt="Producto 7"></div>
+        <div class="gallery-item"><img src="img/producto_flexor.webp" alt="Producto 8"></div>
+        <div class="gallery-item"><img src="img/producto_bateria.webp" alt="Producto 9"></div>
+        <div class="gallery-item"><img src="img/producto_display.webp" alt="Producto 10"></div>
+        <div class="gallery-item"><img src="img/producto_cargador.webp" alt="Producto 11"></div>
+        <div class="gallery-item"><img src="img/producto_case.webp" alt="Producto 12"></div>
+        <div class="gallery-item"><img src="img/producto_cristal_templado.webp" alt="Producto 12"></div>
+        
+        <!-- Agrega más imágenes según sea necesario -->
+      </div> 
+    </div>
+    <button class="scroll-button right" onclick="scrollGallery('right')">&#10095;</button>
+  </section>
+
+  <section class="tutoriales" id="Tutoriales">
+    <h1>TUTORIALES</h1>
+  </section>
+
+  <section class="video-gallery">
+    <button class="scroll-button-video left" onclick="scrollVideos('left')">&#10094;</button>
+    <div class="gallery-container-video"> 
+      <div class="gallery-wrapper-video">
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-importancia-del-modelo.mp4" type="video/mp4" id="Modelo">
+          </video>
+        </div>
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-modelos-versionados.mp4" type="video/mp4" id="Version">
+          </video>
+        </div>
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-conoce-tu-iphone.mp4" type="video/mp4" id="Iphone">
+          </video>
+        </div>
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-conoce-tu-android.mp4" type="video/mp4" id="Android">
+          </video>
+        </div>
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-fallas-comunes.mp4" type="video/mp4" id="Fallas">
+          </video>
+        </div>
+        <div class="gallery-item-video">
+          <video controls>
+            <source src="video/tutorial-cuida-tu-smartphone.mp4" type="video/mp4" id="Cuida">
+          </video>
+        </div>
+        <!-- Agrega más videos según sea necesario -->
+      </div>
+      
+    </div>
+    <button class="scroll-button-video right" onclick="scrollVideos('right')">&#10095;</button>
+  </section>
+
+  <section class="visitanos" id="Visitanos">
+    <h1>VISÍTANOS</h1>
+  </section>
+
+  <section class="map-section">
+    <div id="map"></div>
+  </section>
+
+  <section class="local-container">
+    <div>
+      <h1>DIRECCIÓN</h1>
+      <h3>Lázaro Cárdenas #87, Plaza Central 87, local 116, CP: 06070, Cuauhtémoc, Ciudad de México</h3>
+    </div>
+    <div id="Horario">
+      <h1>HORARIO</h1>
+      <h2>Lunes a sábado</h3>
+      <h4>10 AM - 6 PM</h5>
+    </div>
+    <div>
+      <h1>COTIZACIONES</h1>
+      <h3>55 4262 7473</h3>
+    </div>
+  </section>
+
+  <a href="https://api.whatsapp.com/message/7M7B2VEXW2FXN1?autoload=1&app_absent=0" class="chat"><img src="img/whatsapp.png" alt="">Chatea con nosotros</a>
+
+  <footer>
+    <div class="contacto">
+      <h1>Contacto</h1>
+      <ul class="social-media">
+        <li><a href="https://www.facebook.com/infinitystartrefacciones"><img src="img/icono_facebook.webp" alt="Facebook" class="media"> infiniystartrefacciones</a></li>
+        <li><a href="https://www.instagram.com/infinitystartrefaccion"><img src="img/icono_instagram.webp" alt="Instagram" class="media"> @infinitystartrefaccion</a></li>
+        <li><a href="https://www.tiktok.com/@infinitystartrefaccion?_t=ZM-8tSAt4XRmz7&_r=1"><img src="img/icono_tiktok.webp" alt="Tik Tok" class="media"> infinitystartrefaccion</a></li>
+      </ul>
+    </div>
+    <div class="cotizaciones">
+      <h1>Cotizaciones</h1>
+      <p>55 4262 7473</p>
+    </div>
+    <div class="ubicacion">
+      <h1>Dirección</h1>
+      <p>Lázaro Cárdenas #87, <br> Plaza Central 87, local 116,  <br>CP: 06070, Cuauhtémoc, Ciudad de México</p>   
+    </div>
+    <div class="bymoon">
+      <h1>Hecho por</h1>
+      <a href=""><img src="img/logo_moonandd.webp" alt=""></a>
+    </div>
+  </footer>
+
+  <!-- Inserta el script de Google Maps con tu API Key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" 
+async defer></script>
+
+<script>
+function initMap() {
+// Coordenadas de la ubicación (por ejemplo, la latitud y longitud de tu lugar)
+var location = { lat: 40.7128, lng: -74.0060 }; // Cambia las coordenadas a las de tu lugar
+
+// Crear un nuevo mapa
+var map = new google.maps.Map(document.getElementById("map"), {
+zoom: 14, // Nivel de zoom
+center: location, // Centrado en la ubicación
+mapTypeId: "roadmap", // Tipo de mapa (por ejemplo, carretera)
+});
+
+// Crear un marcador en la ubicación especificada
+var marker = new google.maps.Marker({
+position: location,
+map: map,
+title: "Mi Lugar", // Título del marcador
+});
+
+// Opcional: agregar un info window que aparezca cuando se hace clic en el marcador
+var infoWindow = new google.maps.InfoWindow({
+content: "<h3>Mi Lugar</h3><p>Descripción del lugar</p>", // Información que aparece al hacer clic en el marcador
+});
+
+// Añadir el evento de clic para mostrar la infoWindow
+marker.addListener("click", function () {
+infoWindow.open(map, marker);
+});
+}
+
+</script>
+
+
+
+  <script src="js/script_menu.js" defer></script>
+  <script src="js/script_banner.js" defer></script>
+  <script src="js/script_products.js" defer></script>
+  <script src="js/script_tutoriales.js" defer></script>
+</body>
+</html>
+
+
+
+
+  
+
+
